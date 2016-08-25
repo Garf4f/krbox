@@ -1,0 +1,18 @@
+{
+  "name": "KrBox",
+  "version": "1.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [ "http://elenakrygina.com/*" ],
+      "js": [ "jquery.min.js", "background.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+          "storage"
+  ],
+  "web_accessible_resources": [
+    "/injected.js"
+  ]
+}
