@@ -8,7 +8,7 @@ var settings = [];
 						//6 проверка логин пароль ( 0 - не проверен, 1 - не подходин, 2 - подходит)
 
 var viewMenuInfo = {
-	boxLink:["новая коробка","осень 2016","сыворотки 2","бобибраун"],
+	boxLink:["новая коробка","осень 2016","сыворотки 2","бобибраун","путешествие-2","увлажнение-2"],
 	workMode:["список акков","только 1 акк"],
 	check:["xz","error","ok"],
 	color:["#F8F8F8","green","white","#E6E6E6"]
@@ -25,7 +25,9 @@ var arr_boxLink=[
 	"/box/month/",
 	"/box/month/aktualnyy-makiyazh-osen-2016/",
 	"/box/month/syvorotki-2/",	
-	"/box/month/bobbi-brown/"
+	"/box/month/bobbi-brown/",
+	"/box/month/puteshestvie-2/",
+	"/box/month/uvlazhnenie-2/"
 ];
 
 
@@ -72,8 +74,10 @@ function buyBox(){
 			console.log('log out'); 
 				var text="__" + window.localStorage["__id"] + "__" + window.localStorage["__quantity"] +"__"+"LOGOUT"; 
 				window.localStorage[text]=new Date(); 
-			++window.localStorage["__id"];	
-			setTimeout(function() { document.location.href=boxLink; }, settings[0]*1000);
+				++window.localStorage["__id"];	
+				if (akk.log!=undefined){  //   		КАСТЫЛЬ!!!
+					setTimeout(function() { document.location.href=boxLink; }, settings[0]*1000);
+				}
 		} else { 
 			if (document.getElementsByClassName("fb-item__link__buy")[0] && document.getElementsByClassName("fb-item__link__buy")[0].innerHTML=="Купить"){ 
 				console.log('click'); 	
