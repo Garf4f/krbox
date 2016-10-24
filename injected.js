@@ -1,3 +1,15 @@
+/*				чистка куков
+document.cookie = "BITRIX_SM_LOGIN=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "BITRIX_SM_SALE_UID=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "BITRIX_SM_SOUND_LOGIN_PLAYED=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "BX_USER_ID=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "PHPSESSID=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "PHPSESSID=; path=/; expires="+(new Date(0)).toUTCString();
+document.cookie = "SERVERID=; path=/; expires="+(new Date(0)).toUTCString();*/
+
+
+
+
 var settings = [];
 						//0 интервал (сек) 
 						//1 текущая коробка (№boxLink)
@@ -8,7 +20,7 @@ var settings = [];
 						//6 проверка логин пароль ( 0 - не проверен, 1 - не подходин, 2 - подходит)
 
 var viewMenuInfo = {
-	boxLink:["новая коробка","осень 2016","сыворотки 2","бобибраун","путешествие-2","увлажнение-2"],
+	boxLink:["new month", "ukhod-dlya-tela", "ukhod-dlya-litsa", "favorites-2", "aktualnyy-makiyazh-osen-2016", "syvorotki-2", "bobbi-brown", "puteshestvie-2", "anti-age-2"],
 	workMode:["список акков","только 1 акк"],
 	check:["xz","error","ok"],
 	color:["#F8F8F8","green","white","#E6E6E6"]
@@ -23,11 +35,14 @@ settings[3]=window.localStorage["__id"]; 	// КРИВО НАДО ПОТОМ ПО
 
 var arr_boxLink=[
 	"/box/month/",
+	"/box/month/ukhod-dlya-tela/",
+	"/box/month/ukhod-dlya-litsa/",
+	"/box/month/favorites-2/",
 	"/box/month/aktualnyy-makiyazh-osen-2016/",
 	"/box/month/syvorotki-2/",	
 	"/box/month/bobbi-brown/",
 	"/box/month/puteshestvie-2/",
-	"/box/month/uvlazhnenie-2/"
+	"/box/month/anti-age-2/"
 ];
 
 
@@ -88,7 +103,7 @@ function buyBox(){
 				var text="__" + window.localStorage["__id"] + "__" + window.localStorage["__quantity"]; 
 				window.localStorage[text]=new Date(); 
 				setTimeout(function() { nextAkk();}, 1000*5); 
-			} else { 
+			} else { /*
 
 				if(document.getElementsByClassName("fb-item__auth-buy g__no-mob fb-item__no-link")[0] && document.getElementsByClassName("fb-item__auth-buy g__no-mob fb-item__no-link")[0].innerHTML=="Вы уже оформляли KryginaBox"){
 					var text="__" + window.localStorage["__id"] + "__" + window.localStorage["__quantity"] +"__"+"INSTORY"; 
@@ -109,7 +124,7 @@ function buyBox(){
 					window.localStorage[text]=new Date(); 
 					++window.localStorage["__id"];
 					document.location.href="?logout=yes";	
-				};
+				};*/
 				setTimeout(function() { document.location.href=boxLink; }, settings[0]*1000); 
 			}; 
 		};
@@ -163,7 +178,7 @@ function viewMenu(){
 };
 
 
-// ТУЛБАР   ПОЧИСТИТЬ КОМЕНТЫ
+// ТУЛБАР   ПОЧИСТИТЬ КОММЕНТЫ
 
 	function showDivMenuBar(divMenuBlock){
 
@@ -541,7 +556,7 @@ function viewMenu(){
 
 
 
-// в разработка
+// в разработку
 
 // всплывающее окно с ошибкой типа aller
 // написать логику смены акк при кривом пасе или коробки в корзине или в старом заказе
