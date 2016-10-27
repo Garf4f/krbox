@@ -20,7 +20,7 @@ var settings = [];
 						//6 проверка логин пароль ( 0 - не проверен, 1 - не подходин, 2 - подходит)
 
 var viewMenuInfo = {
-	boxLink:["new month", "ukhod-dlya-tela", "ukhod-dlya-litsa", "favorites-2", "aktualnyy-makiyazh-osen-2016", "syvorotki-2", "bobbi-brown", "puteshestvie-2", "anti-age-2"],
+	boxLink:["new box", "ukhod-dlya-tela", "ukhod-dlya-litsa", "favorites-2", "aktualnyy-makiyazh-osen-2016", "syvorotki-2", "bobbi-brown", "puteshestvie-2", "anti-age-2"],
 	workMode:["список акков","только 1 акк"],
 	check:["xz","error","ok"],
 	color:["#F8F8F8","green","white","#E6E6E6"]
