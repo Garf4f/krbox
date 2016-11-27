@@ -20,7 +20,7 @@ var settings = [];
 						//6 проверка логин пароль ( 0 - не проверен, 1 - не подходин, 2 - подходит)
 
 var viewMenuInfo = {
-	boxLink:["new box", "ukhod-dlya-tela", "ukhod-dlya-litsa", "favorites-2", "aktualnyy-makiyazh-osen-2016", "syvorotki-2", "bobbi-brown", "puteshestvie-2", "anti-age-2"],
+	boxLink:["new box", "sky-shop", "idealnyy-ton", "ukhod-dlya-tela", "ukhod-dlya-litsa", "favorites-2", "aktualnyy-makiyazh-osen-2016", "syvorotki-2", "bobbi-brown", "puteshestvie-2", "anti-age-2"],
 	workMode:["список акков","только 1 акк"],
 	check:["xz","error","ok"],
 	color:["#F8F8F8","green","white","#E6E6E6"]
@@ -35,6 +35,8 @@ settings[3]=window.localStorage["__id"]; 	// КРИВО НАДО ПОТОМ ПО
 
 var arr_boxLink=[
 	"/box/month/",
+	"/box/month/sky-shop/",
+	"/box/month/idealnyy-ton/",
 	"/box/month/ukhod-dlya-tela/",
 	"/box/month/ukhod-dlya-litsa/",
 	"/box/month/favorites-2/",
