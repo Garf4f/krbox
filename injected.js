@@ -244,6 +244,10 @@ function viewMenu(){
 		addSettingsLogin(divMenuWarp);
 		addSettingsCurrentAkk(divMenuWarp);
 
+		addCleaneCookies(divMenuWarp);
+
+
+
 
 		//addSettingsButtonCheckAkks(divMenuWarp);
 		showAkkList(divMenuWarp);
@@ -557,6 +561,31 @@ function viewMenu(){
 	}
 
 
+
+// читска куков
+
+function cleanCookeis(){
+	
+	document.cookie = "BITRIX_SM_LOGIN=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "BITRIX_SM_SALE_UID=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "BITRIX_SM_SOUND_LOGIN_PLAYED=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "BX_USER_ID=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "PHPSESSID=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "PHPSESSID=; path=/; expires="+(new Date(0)).toUTCString();
+	document.cookie = "SERVERID=; path=/; expires="+(new Date(0)).toUTCString();
+}
+
+function addCleaneCookies(divMenuWarp){
+
+	var divCleaneCookies = document.createElement("div");
+	divCleaneCookies.setAttribute("id", "divCleaneCookies");
+
+	
+	var text='<br><input type="button" id="divCleaneCookiesSubmit" value="Почистить Куки" onclick="cleanCookeis()">';
+
+	divCleaneCookies.innerHTML=text;
+	divMenuWarp.appendChild(divCleaneCookies);
+}
 
 // в разработку
 
